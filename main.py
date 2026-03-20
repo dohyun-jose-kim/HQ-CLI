@@ -88,8 +88,8 @@ from result_maker import make_result
 
 # ── 파싱 버전 선택 ─────────────────────────────────────────────────────────
 # 배포 시: DEV_MODE = False 로 변경, DEPLOY_VERSION 에 사용할 버전 지정
-DEV_MODE       = True
-DEPLOY_VERSION = "v2"   # DEV_MODE=False 일 때 고정 사용 버전
+DEV_MODE       = False
+DEPLOY_VERSION = "v2"   # 파싱 방식: TF-IDF 코사인 유사도 ML (scikit-learn)
 
 _PARSING_VERSIONS: dict[str, dict] = {
     "v1": {
