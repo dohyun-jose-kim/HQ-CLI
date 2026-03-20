@@ -1,0 +1,7 @@
+# 영양제 섭취 위험도 평가 CLI — 외부 라이브러리 목록
+# 설치 방법: pip install -r requirements.txt
+
+pandas        # 엑셀 데이터 읽기 (data_processor.py)
+openpyxl      # .xlsx 파일 읽기/쓰기 (main.py, data_processor.py)
+scikit-learn  # TF-IDF 유사도 계산 (parsing_v2.py)
+matplotlib    # 그래프 생성 (result_maker.py)
