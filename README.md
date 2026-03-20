@@ -12,7 +12,7 @@
 
 ## 실행 환경
 
-- Python 3.9 이상
+- Python 3.10 이상
 - 필요 라이브러리: `pandas`, `openpyxl`, `scikit-learn`, `matplotlib`
 
 ---
