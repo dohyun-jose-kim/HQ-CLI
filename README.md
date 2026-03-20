@@ -85,6 +85,8 @@ python main.py
 
 ## 파일 구조
 
+![파이프라인 다이어그램](assets/diagram_overview.png)
+
 ```
 HQ-CLI/
 ├── main.py                # 메인 실행 파일
@@ -95,10 +97,14 @@ HQ-CLI/
 ├── data_processor.py      # HQ 계산
 ├── result_maker.py        # 시각화
 ├── requirements.txt
-└── data/
-    └── preprocessed/
-        ├── 01_UL_Sex-Age_cleaned.xlsx   # 상한섭취량(UL) 데이터
-        └── 02_MHI_Sex-Age_cleaned.xlsx  # 최소위해섭취량(MHI) 데이터
+├── data/
+│   └── preprocessed/
+│       ├── 01_UL_Sex-Age_cleaned.xlsx   # 입력: 상한섭취량(UL) — 성별·연령별
+│       └── 02_MHI_Sex-Age_cleaned.xlsx  # 입력: 최소위해섭취량(MHI) — 성별·연령별
+└── results/                             # 실행 시 자동 생성
+    ├── HQ_(timestamp).png               # 출력: 영양소별 HQ 막대 그래프 (실행마다 생성)
+    ├── result_accumulation.xlsx         # 출력: 누적 결과 — timestamp / 성별 / 나이 / 연령범주 / 영양소별 HQ
+    └── report_accumulation.csv          # 출력: 오류 보고서 — timestamp / 원본입력 / 파싱결과 / 메모 / 자동태그
 ```
 
 ---
