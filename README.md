@@ -24,10 +24,14 @@
 git clone https://github.com/dohyun-jose-kim/HQ-CLI.git
 cd HQ-CLI
 
-# 2. 라이브러리 설치
-pip install -r requirements.txt
+# 2. 가상환경 생성 및 활성화 (uv 사용 권장)
+uv venv .venv --python 3.10
+source .venv/bin/activate
 
-# 3. 실행
+# 3. 라이브러리 설치
+uv pip install -r requirements.txt
+
+# 4. 실행
 python main.py
 ```
 
